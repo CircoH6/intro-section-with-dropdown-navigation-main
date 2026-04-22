@@ -4,15 +4,30 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "Epilogue";
+    src: url(police\Epilogue-VariableFont_wght.ttf) format("truetype-variations");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
 body {
     color: #696969;
     background-color: #fafafa;
-    font-family: nunito;
+    font-family: "Epilogue", sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+    padding: 15px;
 }
 
 a {
     text-decoration: none;
     color: #696969;
+}
+
+a:hover {
+    color: #141414;
+    transition: 0.3s;
 }
 
 header {
@@ -28,7 +43,7 @@ header {
 
 .hl_interfaces{
     display: flex;
-    gap: 20px;
+    gap: 50px;
 }
 
 .selected {
@@ -37,11 +52,143 @@ header {
     cursor: pointer;
 }
 
+.selected_icon {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
 .icon-arrow-up {
     display: none;
 }
 
 .hli_options {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.hli_options a {
+    display: flex;
+    gap: 15px;
+}
+
+.hli_custom-select:hover {
+    color: #141414;
+    transition: 0.3s;
+}
+
+.hli_custom-select:hover .icon-arrow-down {
+    display: none;
+}
+
+.hli_custom-select:hover .icon-arrow-up {
+    filter: brightness(0);
+    display: block;
+}
+
+.hli_custom-select:hover .hli_options {
     display: flex;
     flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.header_right a {
+    padding: 8px 18px;
+}
+
+.hr_register {
+    border: solid #696969 2px;
+    border-radius: 9px;
+}
+
+.hr_register:hover {
+    border-color: #141414;
+}
+
+main {
+    display: flex;
+    padding: 25px 75px;
+}
+
+main section {
+    flex: 1;
+    padding: 25px;
+}
+
+.main_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+.ml_top {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    height: 100%;
+}
+
+.ml_top h1 {
+    color: #141414;
+    font-size: 72px;
+    font-weight: 749;
+}
+
+.ml_top p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ml_top a {
+    border: solid #696969 2px;
+    border-radius: 9px;
+    width: fit-content;
+    padding: 8px 18px;
+    color: #fafafa;
+    background-color: #141414;
+}
+
+.ml_top a:hover {
+    border-color: #141414;
+    background-color: #fafafa;
+    color: #141414;
+}
+
+.ml_bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.ml_bottom img {
+    width: 100%;
+    height: auto;
+}
+
+.main_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.mr_img {
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mr_img img {
+    width: 100%;
+    height: auto;
 }
